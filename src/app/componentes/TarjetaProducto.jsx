@@ -3,10 +3,15 @@ import Card from './ui/Card'
 import CardContent from './ui/CardComtent'
 import {Star} from "lucide-react"
 
-const TarjetaProducto = ({ producto ,setProductoSeleccionado}) => (
+const TarjetaProducto = ({ producto ,setProductoSeleccionado,setIsActiveAgregarAlCarrito}) => (
     <Card 
       className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 flex flex-col h-[400px]"
-      onClick={() => setProductoSeleccionado(producto)}
+      onClick={() => {
+        if (typeof setIsActiveAgregarAlCarrito === 'function') {
+          setIsActiveAgregarAlCarrito(false);
+        } 
+        setProductoSeleccionado(producto)
+      }}
     >
       <div className="relative pb-[60%]">
         <img

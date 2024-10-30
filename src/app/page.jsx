@@ -20,14 +20,15 @@ export default function CatalogoProductos() {
   const [carrito, setCarrito] = useState([]);
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
   const [menuAbierto, setMenuAbierto] = useState(false);
+  const [isActiveAgregarAlCarrito,setIsActiveAgregarAlCarrito] = useState(false)
 
+  
   useEffect(() => {
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
       setCarrito(JSON.parse(carritoGuardado));
     }
   }, []);
-
 
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -41,7 +42,6 @@ export default function CatalogoProductos() {
       setCaracteristicasSeleccionadas({});
     }
   }, [categoriaSeleccionada]);
-
 
   useEffect(() => {
     if (menuAbierto) {
@@ -70,7 +70,6 @@ export default function CatalogoProductos() {
       ));
     }
   };
-
 
   const Carrito = () => {
     if (!mostrarCarrito) return null;
@@ -143,6 +142,8 @@ export default function CatalogoProductos() {
         precioMinimo={precioMinimo}
         calificacionesSeleccionadas={calificacionesSeleccionadas}
         setProductoSeleccionado={setProductoSeleccionado}
+        setCalificacionesSeleccionadas={setCalificacionesSeleccionadas}
+        setIsActiveAgregarAlCarrito={setIsActiveAgregarAlCarrito}
         />}
         
         {productoSeleccionado && <DetalleProducto 
@@ -150,8 +151,8 @@ export default function CatalogoProductos() {
         setCarrito={setCarrito}
         productoSeleccionado={productoSeleccionado}
         setProductoSeleccionado={setProductoSeleccionado}
-        
-
+        setIsActiveAgregarAlCarrito={setIsActiveAgregarAlCarrito}
+        isActiveAgregarAlCarrito={isActiveAgregarAlCarrito}
         />}
       </main>
       <Carrito />

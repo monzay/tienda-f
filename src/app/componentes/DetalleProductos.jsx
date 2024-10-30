@@ -14,6 +14,8 @@ const DetalleProducto = ({
     setProductoSeleccionado,
     carrito,
     setCarrito,
+    setIsActiveAgregarAlCarrito,
+    isActiveAgregarAlCarrito,
 
 }) => {
     if (!productoSeleccionado) return null;
@@ -24,6 +26,7 @@ const DetalleProducto = ({
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-3xl font-bold">{productoSeleccionado.nombre}</h2>
               <Button 
+                className="bg-black text-white"
                 onClick={() => setProductoSeleccionado(null)}
                 variant="outline"
               >
@@ -56,12 +59,12 @@ const DetalleProducto = ({
                   </ul>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <Badge variant="secondary">
-                    {categorias.find(c => c.id === productoSeleccionado.categoria)?.nombre}
-                  </Badge>
                   <Button 
-                    onClick={() => agregarAlCarrito(productoSeleccionado,carrito,setCarrito)}
-                    className="w-full"
+                    onClick={() =>{
+                       setIsActiveAgregarAlCarrito(true)
+                       agregarAlCarrito(productoSeleccionado,carrito,setCarrito)
+                    }}
+                    className={`w-full ${isActiveAgregarAlCarrito ? "" : "bg-black text-white"}`}
                   >
                     Agregar al Carrito
                   </Button>

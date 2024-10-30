@@ -19,6 +19,8 @@ const ListaProductos = ({
     precioMinimo,
     calificacionesSeleccionadas,
     setProductoSeleccionado,
+    setCalificacionesSeleccionadas,
+    setIsActiveAgregarAlCarrito,
 }) => {
 
     const filtrosCategoria = obtenerFiltrosCategoria(categoriaSeleccionada);
@@ -120,7 +122,7 @@ const ListaProductos = ({
           </div>
           <div className="w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
             {productosFiltrados.map((producto) => (
-              <TarjetaProducto key={producto.id} producto={producto} setProductoSeleccionado={setProductoSeleccionado}/>
+              <TarjetaProducto setIsActiveAgregarAlCarrito={setIsActiveAgregarAlCarrito} key={producto.id} producto={producto} setProductoSeleccionado={setProductoSeleccionado}/>
             ))}
           </div>
         </div>
