@@ -1,10 +1,10 @@
 import React from 'react'
-
 import Card from './ui/Card';
 import CardContent from './ui/CardComtent';
 import Button from './ui/button';
 import agregarAlCarrito from '../func/agregarAlCarrito';
-import {Star ,Badge} from "lucide-react"
+import {Star } from "lucide-react"
+import Image from 'next/image';
 
 
 
@@ -34,7 +34,7 @@ const DetalleProducto = ({
             </div>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-1/2">
-                <img
+                <Image
                   src={productoSeleccionado.imagen}
                   alt={productoSeleccionado.nombre}
                   className="w-full h-auto object-cover rounded-lg shadow-md"

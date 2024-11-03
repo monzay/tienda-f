@@ -9,13 +9,17 @@ function PerfilUsuario({ usuario, onEditClick }) {
     <div className="bg-white shadow-sm rounded-lg overflow-hidden mb-8">
       <div className="px-6 py-8">
         <div className="flex items-center space-x-6">
-          <img
-            src=""
+         {
+          /*
+           <img
+            src={false}
             alt={false}
             width={80}
             height={80}
             className="rounded-full"
           />
+          */
+         }
           <div>
             <h2 className="text-2xl font-semibold text-gray-800">{usuario.nombre}</h2>
             <p className="text-gray-600 text-sm">{usuario.email}</p>
@@ -51,13 +55,17 @@ function ComprasRecientes({ compras }) {
           <div key={compra.id} className="px-6 py-4 flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 bg-gray-200 rounded-md flex items-center justify-center">
-                <img
-                  src=""
-                  alt={false}
-                  width={64}
-                  height={64}
-                  className="rounded-md"
-                />
+              {
+          /*
+           <img
+            src={false}
+            alt={false}
+            width={80}
+            height={80}
+            className="rounded-full"
+          />
+          */
+         }
               </div>
               <div>
                 <h4 className="text-lg font-medium text-gray-800">{compra.producto}</h4>
@@ -226,7 +234,7 @@ function ModalEditarPerfil({ isOpen, onClose, usuario, errores, onChange, onSubm
 }
 
 // Componente principal
-const  page  =() =>  {
+const  Page  =() =>  {
   const [direcciones, setDirecciones] = useState([
     { id: 2, tipo: 'Trabajo', direccion: 'Avenida Comercial 456, Ciudad', codigoPostal: '28002' },
   ])
@@ -364,4 +372,4 @@ const  page  =() =>  {
 }
 
 
-export default page
+export default Page

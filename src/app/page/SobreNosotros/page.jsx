@@ -1,6 +1,4 @@
-import { Building2, Mail, Phone, ShoppingBag, Users } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
 
 const page =() =>  {
@@ -14,12 +12,9 @@ const page =() =>  {
           <p className="text-gray-600 mb-4">
             Fundada en 2010, nuestra tienda comenzó como un pequeño negocio familiar con la visión de ofrecer productos de alta calidad a precios accesibles. A lo largo de los años, hemos crecido y evolucionado, pero nuestra dedicación a la satisfacción del cliente sigue siendo nuestra prioridad número uno.
           </p>
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ninja-kamui-con-oni-mascarilla_3840x2160_xtrafondos.com-6FV5y150Eky0156rvmcBPp9ePs83g4.jpg"
-            width={400}
-            height={300}
-            className="rounded-lg"
-          />
+          <div
+            className="lugar de la img rounded-lg"
+          ></div>
         </div>
         <div>
           <h2 className="text-2xl font-semibold mb-4">Nuestra Misión</h2>

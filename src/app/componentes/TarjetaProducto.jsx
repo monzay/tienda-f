@@ -2,6 +2,7 @@ import React from 'react'
 import Card from './ui/Card'
 import CardContent from './ui/CardComtent'
 import {Star} from "lucide-react"
+import Image from 'next/image';
 
 const TarjetaProducto = ({ producto ,setProductoSeleccionado,setIsActiveAgregarAlCarrito}) => (
     <Card 
@@ -14,7 +15,7 @@ const TarjetaProducto = ({ producto ,setProductoSeleccionado,setIsActiveAgregarA
       }}
     >
       <div className="relative pb-[60%] ">
-        <img
+        <Image
           src={producto.imagen}
           alt={producto.nombre}
           className="absolute top-0 left-0 w-full h-full object-contain "

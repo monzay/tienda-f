@@ -1,11 +1,9 @@
 "use client"
-
 import { useState } from 'react'
 import {  Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react'
 
-
-const page = () => {
-  const [activeTab, setActiveTab] = useState('madrid')
+const Page = () => {
+  
   const [formSubmitted, setFormSubmitted] = useState(false)
 
   const handleSubmit = (e) => {
@@ -85,4 +83,4 @@ const page = () => {
     </div>
   )
 }
-export default page
+export default Page

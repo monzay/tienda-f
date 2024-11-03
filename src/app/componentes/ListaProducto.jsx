@@ -4,7 +4,6 @@ import Card from './ui/Card';
 import CardContent from './ui/CardComtent';
 import TarjetaProducto from './TarjetaProducto';
 import Button from './ui/button';
-
 import categorias from '../JSON/categoria';
 import obtenerFiltrosCategoria from '../func/obtenerFiltrosCategoria';
 import { useState } from 'react';
