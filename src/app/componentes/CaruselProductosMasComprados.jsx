@@ -1,6 +1,5 @@
 import { useState,useRef ,useEffect} from "react"
 import productosMasCompradosData from "../JSON/productosMasComprados";
-
 const CarouselProductosMasComprados = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);
@@ -25,14 +24,14 @@ const CarouselProductosMasComprados = () => {
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {[...productosMasCompradosData, ...productosMasCompradosData].map((producto, index) => (
-                  <div key={`${producto.id}-${index}`} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-background rounded-lg shadow-lg overflow-hidden group">
-                      <div className="relative aspect-[16/9]">
+                {[...productosMasCompradosData, ...productosMasCompradosData].map((producto,index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4 cursor-pointer" >
+                    <div className="bg-background rounded-lg shadow-lg overflow-hidden group ">
+                      <div className=" relative aspect-[16/9] flex justify-center items-center">
                         <img
                           src={producto.imagen}
                           alt={producto.nombre}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:brightness-50"
+                          className="  w-[40%] h-full object-contain transition-transform duration-300 group-hover:scale-110 "
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                           <h3 className="font-bold text-xl mb-2 text-white">{producto.nombre}</h3>

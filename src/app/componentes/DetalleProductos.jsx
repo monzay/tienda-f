@@ -5,7 +5,6 @@ import CardContent from './ui/CardComtent';
 import Button from './ui/button';
 import agregarAlCarrito from '../func/agregarAlCarrito';
 import {Star ,Badge} from "lucide-react"
-import categorias from '../JSON/categoria';
 
 
 
@@ -42,7 +41,7 @@ const DetalleProducto = ({
                 />
               </div>
               <div className="lg:w-1/2 space-y-6">
-                <p className="text-4xl font-bold text-primary">${productoSeleccionado.precio.toFixed(2)}</p>
+                <p className="text-4xl font-bold text-primary">${productoSeleccionado.precio}</p>
                 <div className="flex items-center">
                   {[...Array(5)].map((_, index) => (
                     <Star key={index} className={`w-5 h-5 ${index < Math.floor(productoSeleccionado.calificacion) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />

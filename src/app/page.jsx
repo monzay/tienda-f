@@ -1,15 +1,17 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { X } from 'lucide-react';
 import Button from './componentes/ui/button';
-import Footer from './componentes/Footer';
-import Header  from './componentes/Header';
 import obtenerFiltrosCategoria from './func/obtenerFiltrosCategoria';
 import CarouselProductosMasComprados from './componentes/CaruselProductosMasComprados';
 import SeccionCategorias from './componentes/SeccionCategorias';
 import ProductosDestacados from './componentes/ProductosDestacados';
 import ListaProductos from './componentes/ListaProducto';
 import DetalleProducto from './componentes/DetalleProductos';
+import { HeaderContext } from './Providers/HeaderContexto';
+
+
+
 export default function CatalogoProductos() {
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
@@ -17,12 +19,9 @@ export default function CatalogoProductos() {
   const [precioMinimo, setPrecioMinimo] = useState(0);
   const [calificacionesSeleccionadas, setCalificacionesSeleccionadas] = useState([]);
   const [caracteristicasSeleccionadas, setCaracteristicasSeleccionadas] = useState({});
-  const [carrito, setCarrito] = useState([]);
-  const [mostrarCarrito, setMostrarCarrito] = useState(false);
-  const [menuAbierto, setMenuAbierto] = useState(false);
   const [isActiveAgregarAlCarrito,setIsActiveAgregarAlCarrito] = useState(false)
+  const {mostrarCarrito,setMostrarCarrito,menuAbierto,carrito,setCarrito } = useContext(HeaderContext)
 
-  
   useEffect(() => {
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
@@ -54,8 +53,6 @@ export default function CatalogoProductos() {
       document.body.style.overflow = 'visible';
     };
   }, [menuAbierto]);
-
-
 
   const eliminarDelCarrito = (productoId) => {
     setCarrito(carrito.filter(item => item.id !== productoId));
@@ -91,7 +88,7 @@ export default function CatalogoProductos() {
                 <div key={item.id} className="flex items-center justify-between py-4 border-b">
                   <div>
                     <h3 className="font-semibold">{item.nombre}</h3>
-                    <p className="text-sm text-muted-foreground">${item.precio.toFixed(2)} x {item.cantidad}</p>
+                    <p className="text-sm text-muted-foreground">${item.precio} x {item.cantidad}</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Button variant="outline" size="sm" onClick={() => actualizarCantidad(item.id, item.cantidad - 1)}>-</Button>
@@ -119,12 +116,7 @@ export default function CatalogoProductos() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <Header 
-      carrito={carrito} 
-      setMostrarCarrito={setMostrarCarrito}
-      setMenuAbierto={setMenuAbierto}
-      menuAbierto={menuAbierto}
-      />
+  
       <main className="flex-grow">
         <CarouselProductosMasComprados />
         <SeccionCategorias 
@@ -156,7 +148,6 @@ export default function CatalogoProductos() {
         />}
       </main>
       <Carrito />
-      <Footer />
     </div>
   );
 }
