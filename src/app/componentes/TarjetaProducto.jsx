@@ -16,6 +16,8 @@ const TarjetaProducto = ({ producto ,setProductoSeleccionado,setIsActiveAgregarA
     >
       <div className="relative pb-[60%] ">
         <Image
+          width={300}
+          height={300}
           src={producto.imagen}
           alt={producto.nombre}
           className="absolute top-0 left-0 w-full h-full object-contain "

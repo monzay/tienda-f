@@ -27,7 +27,7 @@ export default function CatalogoProductos() {
     if (carritoGuardado) {
       setCarrito(JSON.parse(carritoGuardado));
     }
-  }, );
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(carrito));

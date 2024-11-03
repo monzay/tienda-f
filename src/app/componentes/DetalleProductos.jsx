@@ -35,6 +35,8 @@ const DetalleProducto = ({
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-1/2">
                 <Image
+                width={300}
+                height={300}
                   src={productoSeleccionado.imagen}
                   alt={productoSeleccionado.nombre}
                   className="w-full h-auto object-cover rounded-lg shadow-md"

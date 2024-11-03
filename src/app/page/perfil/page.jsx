@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import {  Settings, Package, MapPin, X } from 'lucide-react'
 import { useState } from 'react'
 
