@@ -254,7 +254,6 @@ const  Page  =() =>  {
   })
 
   const compras = [
-    { id: 1, producto: 'Camiseta Azul', fecha: '15/06/2023', precio: 29.99, estado: 'Entregado' },
   ]
 
   const manejarCambioInputDireccion = (e) => {
