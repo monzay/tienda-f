@@ -29,7 +29,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/">
-          <h1 className="text-2xl font-bold">Mi Tienda Online</h1></Link>
+          <h1 className="text-2xl font-bold">Maricle </h1></Link>
           <div className="flex items-center space-x-4">
             <button
               className="md:hidden z-50 relative"

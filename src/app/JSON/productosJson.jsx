@@ -12,10 +12,10 @@ const productosData = [
       purchases: 150
     },
     {
-      id: 2,
+      id: 234234,
       nombre: "pc gamer",
       categoria: 1,
-      precio: "1.023.500",
+      precio: 999.99,
       descripcion: "Marca: AMD, Modelo: RYZEN 7 5700G, Tipo de procesador: RYZEN 7 5700G, Tamaño del disco duro: 1 TB, Marca del procesador: AMD, Línea del procesador: Ryzen 7, Modelo del procesador: 5700G",
       caracteristicas: ["Procesador i7", "16GB RAM", "512GB SSD", "Pantalla 4K"],
       imagen: "https://http2.mlstatic.com/D_NQ_NP_643509-MLA75371068291_032024-O.webp",
@@ -26,7 +26,7 @@ const productosData = [
     {
       id: 3,
       nombre: "Notebook Asus",
-      categoria: 2,
+      categoria: 1,
       precio: 718.799,
       descripcion: "Notebook Asus X515ea-ej3968 Fhd I3 8gb/256gb Ssd Anti Glare Color Gris",
       caracteristicas: ["Con pantalla táctil: No", "Resolución de la pantalla: FHD 1920 x 1080", "Procesador: Intel Core i3 1115G4", "Sistema operativo: FreeDOS", "Capacidad de disco SSD: 256 GB", "Memoria RAM: 8 GB", "Conexión wifi y bluetooth.", "Cuenta con 4 puertos USB y puerto HDMI.", "Modo de sonido Mono."],
@@ -92,10 +92,10 @@ const productosData = [
     },
     {
       id: 504,
-      nombre: "Reloj Inteligente Pro",
-      categoria: 1,
+      nombre: "Zapatillas",
+      categoria: 2,
       precio: 299.99,
-      descripcion: "Reloj inteligente con múltiples funciones de salud y fitness.",
+      descripcion: "zapatillas blancas adidas  GH324 ",
       caracteristicas: ["Monitor cardíaco", "GPS integrado", "Resistente al agua", "Batería de larga duración"],
       imagen: "https://http2.mlstatic.com/D_NQ_NP_919538-MLA69552280767_052023-O.webp",
       calificacion: 4.6,
@@ -106,7 +106,7 @@ const productosData = [
     {
       id: 590,
       nombre: "Pantalon Cargo Azul",
-      categoria: 3,
+      categoria: 2,
       precio: 
       50.500,
       descripcion: "CPantalon Cargo Azul Mom Jean Matizado Premium Hombre",
@@ -121,7 +121,7 @@ const productosData = [
     {
       id: 599,
       nombre: "Motorola Moto",
-      categoria: 3,
+      categoria: 1,
       precio: 799.999,
       descripcion: "Motorola Moto G85 5g 256Gb + 8GB Ram Urban Grey",
       caracteristicas: ["Peso: 200g", "Ideal para perros", "Sabor: pollo"],
@@ -133,7 +133,7 @@ const productosData = [
     {
       id: 600,
       nombre: "Tarjeta De Video",
-      categoria: 3,
+      categoria: 1,
       precio: 421.999,
       descripcion: "Tarjeta De Video Msi Geforce Rtx 3050 Gaming X 6g",
       caracteristicas: [
@@ -149,7 +149,7 @@ const productosData = [
     {
       id: 601,
       nombre: "Tarjeta gráfica",
-      categoria: 3,
+      categoria: 1,
       precio: 383.999,
       descripcion: "Tarjeta gráfica Msi Geforce Rtx 3050 Gaming X 6gb Gddr6 96bit",
       caracteristicas: [
@@ -166,7 +166,7 @@ const productosData = [
     {
       id: 602,
       nombre: "Pc Diseño Grafico",
-      categoria: 3,
+      categoria: 1,
       precio: 99.349,
       descripcion: "Pc Diseño Grafico I5 12th Ram 32gb Ssd 1tb Rtx 3050 6gb Wifi",
       caracteristicas: [],
@@ -178,7 +178,7 @@ const productosData = [
     {
       id: 603,
       nombre: "Pc Gamer ",
-      categoria: 3,
+      categoria: 1,
       precio: 692.999,
       descripcion: "Pc Gamer Armada Ryzen 7 5700g Ram 32b Disco Ssd 1tb Wifi W10",
       caracteristicas: [],
@@ -188,9 +188,9 @@ const productosData = [
       purchases: 70
     },
     {
-      id: 604,
+      id: 6023,
       nombre: "Pc Gamer Ryzen",
-      categoria: 3,
+      categoria: 1,
       precio: 9.99,
       descripcion: "Pc Gamer Ryzen 7 5700g Ram 32gb Vega 8 960gb Wifi",
       caracteristicas: [],
